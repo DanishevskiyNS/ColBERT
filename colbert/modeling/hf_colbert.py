@@ -2,7 +2,7 @@ import importlib
 from unicodedata import name
 import torch.nn as nn
 import transformers
-from transformers import BertPreTrainedModel, BertModel, AutoTokenizer, AutoModel, AutoConfig
+from transformers import BertPreTrainedModel, BertModel, AutoTokenizer, AutoModel, AutoConfig, DistilBertModel
 from transformers import RobertaModel, RobertaPreTrainedModel
 from transformers import XLMRobertaModel, XLMRobertaConfig
 from transformers import ElectraModel, ElectraPreTrainedModel
@@ -40,7 +40,8 @@ model_object_mapping = {
     "bert-base-uncased": BertModel,
     "bert-large-uncased": BertModel,
     "microsoft/mdeberta-v3-base": DebertaV2Model,
-    "bert-base-multilingual-uncased": BertModel
+    "bert-base-multilingual-uncased": BertModel,
+    "distilbert/distilbert-base-uncased": DistilBertModel,
 
 }
 
